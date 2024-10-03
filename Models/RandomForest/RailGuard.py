@@ -1,10 +1,11 @@
 import numpy as np
 import pickle
 import streamlit as st
+import sklearn
 
 
 #laoding the saved model
-loaded_model = pickle.load(open('C:/Users/Vishva/Desktop/FDM Mini Project/FDM-MINI-PROJECT/Models/RandomForest/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('C:/Users/Vishva/Desktop/FDM Mini-Project/FDM-MINI-PROJECT/Models/RandomForest/trained_model.sav', 'rb'))
 
 #creating the function for prediction
 def accident_prediction(input_data):
@@ -19,14 +20,14 @@ def accident_prediction(input_data):
     print(prediction)
 
     if (prediction[0]==0):
-        return "⚠️ **WARNING!**: An accident is likely to occur based on the current conditions."
+        return "An accident is likely to occur based on the current conditions."
     else:
-        return "✅ **All Clear!**: No accident predicted with the given inputs."
+        return "No accident predicted with the given inputs."
     
     
 def main():
     # giving the title
-    st.title("Railway Accident Prediction Web App")
+    st.title("RailGuard")
     
     # getting the input data from the user
     Track_Class = st.text_input("Track Class")
@@ -35,7 +36,6 @@ def main():
     Train_Speed = st.text_input("Train Speed")
     Joint_Track_Class = st.text_input("Joint Track Class")
     Track_Type_Code = st.text_input("Track Type Code")
-    Class_ = st.text_input("Class")
     Station_encoded = st.text_input("Station (Encoded)")
     Track_Name_encoded = st.text_input("Track Name (Encoded)")
     
@@ -44,7 +44,7 @@ def main():
     # creating a button for the prediction
     if st.button('Accident Prediction Result'):
         result = accident_prediction([Track_Class, Gross_Tonnage, Maximum_Speed, Train_Speed, 
-                                         Joint_Track_Class, Track_Type_Code, Class_, Station_encoded, Track_Name_encoded])
+                                         Joint_Track_Class, Track_Type_Code, Station_encoded, Track_Name_encoded])
         
     st.success(result)
     
