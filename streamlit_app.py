@@ -3,7 +3,9 @@ import pickle
 import streamlit as st
 
 #laoding the saved model
-loaded_model = pickle.load(open('.\Models\RandomForest\trained_model.sav', 'rb'))
+
+
+loaded_model = pickle.load(open('C:/Users/Vishva/Desktop/FDM Mini-Project/FDM-MINI-PROJECT/Models/trained_model.sav', 'rb'))
 
 #creating the function for prediction
 def accident_prediction(input_data):
@@ -17,7 +19,7 @@ def accident_prediction(input_data):
     prediction = loaded_model.predict(input_data_reshaped)
     print(prediction)
 
-    if (prediction[0]==0):
+    if (prediction[0]==1):
         return "An accident is likely to occur based on the current conditions."
     else:
         return "No accident predicted with the given inputs."
