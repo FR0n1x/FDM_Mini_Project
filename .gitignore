@@ -2,3 +2,4 @@
 Models/ANN/preprocessedDataset_standarized.csv
 *.csv
 Models/RandomForest/trained_model.sav
+Models/RandomForest/trained_model.zip
