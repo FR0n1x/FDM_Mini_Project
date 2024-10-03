@@ -5,7 +5,7 @@ import streamlit as st
 #laoding the saved model
 
 
-loaded_model = pickle.load(open('C:/Users/Vishva/Desktop/FDM Mini-Project/FDM-MINI-PROJECT/Models/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('./Models/trained_model.sav', 'rb'))
 
 #creating the function for prediction
 def accident_prediction(input_data):
