@@ -318,7 +318,6 @@ service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629
 setuptools==69.5.1
 sip @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/sip_1699475590677/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
-scikit-learn
 smart-open @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/smart_open_1699483216058/work
 smmap @ file:///tmp/build/80754af9/smmap_1611694433573/work
 sniffio @ file:///C:/b/abs_3akdewudo_/croot/sniffio_1705431337396/work
