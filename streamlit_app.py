@@ -1,8 +1,6 @@
 import numpy as np
 import pickle
 import streamlit as st
-import sklearn
-
 
 #laoding the saved model
 loaded_model = pickle.load(open('C:/Users/Vishva/Desktop/FDM Mini-Project/FDM-MINI-PROJECT/Models/RandomForest/trained_model.sav', 'rb'))
